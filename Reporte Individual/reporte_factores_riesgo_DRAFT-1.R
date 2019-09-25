@@ -149,12 +149,13 @@ get_domain_total <- function(dominio,person){
 person <- 200
       #try(dev.off())
       #x11(width=8,height=11)
-#pdf('reporte_individual_factores_riesgo.pdf',width = 8,height = 11)
+
+pdf('reporte_individual_factores_riesgo_DRAFT1.pdf',width = 11,height = 8)
+
 y_coords_category <- c(1,2.5,4.5,7,9.5)
 y_coords_domain <- 1:10
 x_coord_category <- -.45
 x_coord_domain <- 2.05
-
 plot(NULL,ylim=c(11,0),xlim=c(-2.5,2.5), axes=FALSE, ann=FALSE)
 mtext(side=3, text = paste("Resultados Individuales (FOLIO:",person, ")"), line=-1, cex=2, f=2)
 POL_x <- c(-2.35,-2.35,2.25,2.25)
@@ -212,8 +213,7 @@ for(dom in 1:10){
        dom_tot$evaluation,cex=0.9)
 }
 
-
-#dev.off()
+dev.off()
 
 
 
